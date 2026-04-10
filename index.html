@@ -1926,55 +1926,47 @@
     }
 
     function renderGallery() {
-      if (!masonryGallery) return;
+  if (!masonryGallery) return;
 
-      currentGallery = shuffle(allImages);
-      masonryGallery.innerHTML = "";
+  currentGallery = shuffle(allImages);
+  masonryGallery.innerHTML = "";
 
-      currentGallery.forEach((src, index) => {
-        const item = document.createElement("button");
-        item.className = "masonry-item";
-        item.type = "button";
-        item.setAttribute("aria-label", `${uiText[currentLang].lightboxOpen} ${index + 1}`);
+  currentGallery.forEach((src, index) => {
+    const item = document.createElement("button");
+    item.className = "masonry-item";
+    item.type = "button";
+    item.setAttribute("aria-label", `${uiText[currentLang].lightboxOpen} ${index + 1}`);
 
-        const image = document.createElement("img");
-        image.alt = `Lafoto portfolio image ${index + 1}`;
-        image.loading = index < 6 ? "eager" : "lazy";
-        image.decoding = "async";
+    const image = document.createElement("img");
+    image.alt = `Lafoto portfolio image ${index + 1}`;
+    image.loading = index < 6 ? "eager" : "lazy";
+    image.decoding = "async";
 
-        if (index < 4) {
-          image.fetchPriority = "high";
-        }
-
-        image.classList.add("is-loading");
-
-        image.addEventListener("load", () => {
-          image.classList.remove("is-loading");
-          image.classList.remove("is-error");
-          image.style.opacity = "1";
-          image.style.visibility = "visible";
-        });
-
-        image.addEventListener("error", () => {
-          image.classList.remove("is-loading");
-          image.classList.add("is-error");
-        });
-
-        image.src = src;
-
-        if (image.complete) {
-          image.classList.remove("is-loading");
-          image.classList.remove("is-error");
-          image.style.opacity = "1";
-          image.style.visibility = "visible";
-        }
-
-        item.appendChild(image);
-        item.addEventListener("click", () => openLightbox(index));
-
-        masonryGallery.appendChild(item);
-      });
+    if (index < 4) {
+      image.fetchPriority = "high";
     }
+
+    image.addEventListener("load", () => {
+      image.style.opacity = "1";
+      image.style.visibility = "visible";
+    });
+
+    image.addEventListener("error", () => {
+      image.classList.add("is-error");
+    });
+
+    image.src = src;
+
+    if (image.complete) {
+      image.style.opacity = "1";
+      image.style.visibility = "visible";
+    }
+
+    item.appendChild(image);
+    item.addEventListener("click", () => openLightbox(index));
+    masonryGallery.appendChild(item);
+  });
+}
 
     function updateLightbox() {
       const src = currentGallery[lightboxIndex];
