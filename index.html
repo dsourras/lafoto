@@ -41,17 +41,14 @@
       --bg:#0b0b0d;
       --bg-soft:#121215;
       --panel:rgba(255,255,255,0.04);
-      --panel-strong:rgba(255,255,255,0.065);
       --stroke:rgba(255,255,255,0.10);
       --stroke-soft:rgba(255,255,255,0.06);
       --text:#f5f1ea;
       --muted:#c8c1b8;
       --soft:#a89f95;
       --accent:#dbc2a1;
-      --accent-2:#b59a79;
       --shadow:0 24px 80px rgba(0,0,0,0.34);
       --radius:24px;
-      --radius-lg:34px;
       --radius-xl:40px;
       --max:1360px;
       --header-h:84px;
@@ -613,6 +610,7 @@
       box-shadow:0 12px 30px rgba(0,0,0,0.18);
       cursor:pointer;
       transition:transform .24s ease, border-color .24s ease;
+      min-height:120px;
     }
 
     .masonry-item:hover{
@@ -620,34 +618,23 @@
       border-color:rgba(255,255,255,0.13);
     }
 
-    .masonry-item::before{
-      content:"";
-      display:block;
-      width:100%;
-      min-height:140px;
-      background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
-    }
-
     .masonry-item img{
-      position:relative;
-      z-index:2;
       width:100%;
       height:auto;
       display:block;
-      opacity:1;
-      visibility:visible;
+      opacity:1 !important;
+      visibility:visible !important;
       background:#0f0f12;
       transition:transform .7s ease, filter .45s ease, opacity .25s ease;
       will-change:transform;
-      margin-top:-140px;
     }
 
     .masonry-item img.is-loading{
-      opacity:.85;
+      opacity:1;
     }
 
     .masonry-item img.is-error{
-      opacity:.35;
+      opacity:.35 !important;
       min-height:140px;
       object-fit:cover;
     }
@@ -668,7 +655,9 @@
       pointer-events:none;
     }
 
-    .masonry-item:hover::after{opacity:1}
+    .masonry-item:hover::after{
+      opacity:1;
+    }
 
     .about-grid{
       display:grid;
@@ -1188,14 +1177,7 @@
       .masonry-item{
         margin:0 0 12px;
         border-radius:18px;
-      }
-
-      .masonry-item::before{
-        min-height:110px;
-      }
-
-      .masonry-item img{
-        margin-top:-110px;
+        min-height:100px;
       }
     }
 
@@ -1218,14 +1200,7 @@
       .masonry-item{
         margin:0 0 10px;
         border-radius:16px;
-      }
-
-      .masonry-item::before{
-        min-height:100px;
-      }
-
-      .masonry-item img{
-        margin-top:-100px;
+        min-height:96px;
       }
     }
   </style>
@@ -1937,7 +1912,6 @@
         item.setAttribute("aria-label", `${uiText[currentLang].lightboxOpen} ${index + 1}`);
 
         const image = document.createElement("img");
-        image.src = src;
         image.alt = `Lafoto portfolio image ${index + 1}`;
         image.loading = index < 6 ? "eager" : "lazy";
         image.decoding = "async";
@@ -1950,12 +1924,24 @@
 
         image.addEventListener("load", () => {
           image.classList.remove("is-loading");
+          image.classList.remove("is-error");
+          image.style.opacity = "1";
+          image.style.visibility = "visible";
         });
 
         image.addEventListener("error", () => {
           image.classList.remove("is-loading");
           image.classList.add("is-error");
         });
+
+        image.src = src;
+
+        if (image.complete) {
+          image.classList.remove("is-loading");
+          image.classList.remove("is-error");
+          image.style.opacity = "1";
+          image.style.visibility = "visible";
+        }
 
         item.appendChild(image);
         item.addEventListener("click", () => openLightbox(index));
