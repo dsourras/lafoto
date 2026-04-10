@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lafoto | Terms &amp; Conditions</title>
+  <meta name="description" content="Lafoto terms and conditions for wedding photography and cinematography services.">
+  <meta name="theme-color" content="#0d0d0c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d0d0c;
+      --panel: rgba(22, 22, 19, 0.84);
+      --text: #f5f0e8;
+      --text-soft: rgba(245, 240, 232, 0.78);
+      --line: rgba(255, 243, 228, 0.12);
+      --accent: #cfaa74;
+      --cream: #f3e7d6;
+      --shadow: 0 28px 80px rgba(0, 0, 0, 0.36);
+      --radius-lg: 28px;
+      --radius-pill: 999px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(207, 170, 116, 0.08), transparent 32%),
+        linear-gradient(180deg, #0c0c0b 0%, #11110f 100%);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .shell {
+      width: min(980px, calc(100vw - 32px));
+      margin: 24px auto 64px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-pill);
+      background: rgba(18, 18, 16, 0.76);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 54px;
+      height: 54px;
+      padding: 7px;
+      border-radius: 16px;
+      background: var(--cream);
+      object-fit: contain;
+    }
+
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand-copy strong,
+    h1,
+    h2 {
+      font-family: "Cormorant Garamond", serif;
+    }
+
+    .brand-copy strong {
+      font-size: 1.9rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+    }
+
+    .brand-copy span {
+      color: rgba(245, 240, 232, 0.56);
+      font-size: 0.76rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .back-link {
+      padding: 12px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    main {
+      margin-top: 18px;
+      padding: clamp(28px, 4vw, 44px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.76rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.8rem, 7vw, 4.8rem);
+      line-height: 0.95;
+      font-weight: 600;
+    }
+
+    .intro {
+      max-width: 70ch;
+      margin: 18px 0 0;
+      line-height: 1.8;
+      color: var(--text-soft);
+    }
+
+    .lang-block {
+      margin-top: 38px;
+      padding-top: 34px;
+      border-top: 1px solid var(--line);
+    }
+
+    .lang-label {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 0 14px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--line);
+      color: var(--accent);
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    h2 {
+      margin: 24px 0 12px;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 600;
+    }
+
+    h3 {
+      margin: 22px 0 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    p, li {
+      color: var(--text-soft);
+      line-height: 1.8;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .contact-box {
+      margin-top: 24px;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    @media (max-width: 720px) {
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .back-link {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Back to Lafoto">
+        <img src="logo.png" alt="Lafoto logo">
+        <span class="brand-copy">
+          <strong>Lafoto</strong>
+          <span>Wedding Photography &amp; Cinematography</span>
+        </span>
+      </a>
+      <a class="back-link" href="index.html">Back to main site</a>
+    </header>
+
+    <main>
+      <p class="eyebrow">Legal</p>
+      <h1>Terms &amp; Conditions</h1>
+      <p class="intro">
+        These Terms &amp; Conditions describe the basis on which Lafoto provides wedding photography and cinematography services.
+        They are intended to offer clarity, protect both parties, and support a professional working relationship from the first inquiry to final delivery.
+      </p>
+
+      <section class="lang-block" id="terms-en">
+        <span class="lang-label">English</span>
+        <h2>Terms &amp; Conditions</h2>
+
+        <h3>1. Services</h3>
+        <p>
+          Lafoto provides wedding photography and, where agreed, wedding cinematography services for civil, religious, and related events such as preparations,
+          receptions, portrait sessions, and selected pre-wedding or after-wedding coverage. The scope of work for each booking is defined by the individual agreement,
+          written confirmation, or accepted quotation shared with the client.
+        </p>
+
+        <h3>2. Booking and Confirmation</h3>
+        <p>
+          A date is considered reserved only after written confirmation and receipt of the agreed booking fee or deposit. Initial conversations, availability checks,
+          or verbal discussions do not hold a date. Lafoto reserves the right to decline or release an unconfirmed date if another confirmed booking request is received.
+        </p>
+
+        <h3>3. Payments</h3>
+        <p>
+          Pricing, installment structure, and payment dates are communicated before booking. Unless otherwise agreed in writing, the booking fee is non-refundable
+          and is applied toward the total service price. Final delivery may be withheld until all agreed payments have been received in full. Any additional services,
+          extra hours, albums, prints, or revisions beyond the original agreement may be charged separately.
+        </p>
+
+        <h3>4. Cancellations and Changes</h3>
+        <p>
+          If the client cancels the booking, the booking fee remains non-refundable because the date has been reserved and other work may have been declined.
+          If cancellation occurs close to the event, Lafoto may retain additional amounts already due under the agreed payment schedule. Date changes are subject to
+          availability and cannot be guaranteed. If Lafoto is unable to perform the services due to serious illness, emergency, accident, or circumstances beyond reasonable control,
+          every reasonable effort will be made to provide an alternative professional or to refund payments for undelivered services, as appropriate.
+        </p>
+
+        <h3>5. Coverage and Cooperation</h3>
+        <p>
+          The quality and completeness of coverage depend on schedule, venue conditions, weather, available light, event timing, and client cooperation.
+          Clients are responsible for ensuring that access, permissions, and event logistics are reasonably arranged. Lafoto is not responsible for missed images caused by
+          lateness, restrictions imposed by venues or celebrants, interference by guests, unsafe conditions, or circumstances outside professional control.
+        </p>
+
+        <h3>6. Editing and Artistic Judgment</h3>
+        <p>
+          The client acknowledges that Lafoto is engaged for an individual artistic style and professional judgment. Image selection, color treatment, framing, retouching,
+          and final editing decisions remain at Lafoto's discretion. Unedited files, RAW files, or all captured frames are not included unless expressly agreed in writing.
+        </p>
+
+        <h3>7. Delivery Timelines</h3>
+        <p>
+          Delivery timelines vary depending on season, workload, and the scope of the project. Preview images, full galleries, films, albums, or other deliverables are supplied
+          within a reasonable timeframe communicated to the client after the event or at booking. Delivery dates are estimates, not guaranteed deadlines, unless expressly stated.
+          Minor delays caused by high season, technical processing, or supplier schedules do not constitute breach of agreement.
+        </p>
+
+        <h3>8. Intellectual Property and Usage Rights</h3>
+        <p>
+          Copyright in all photographs, films, edited files, and related materials remains with Lafoto unless otherwise agreed in writing. Clients receive a personal, non-exclusive,
+          non-transferable license to use delivered material for private use, sharing with family and friends, and personal social media, provided that the work is not altered in a way
+          that damages its integrity. Commercial use, resale, publication, submission to third parties, advertising use, or transfer of rights requires prior written permission.
+        </p>
+
+        <h3>9. Portfolio and Promotional Use</h3>
+        <p>
+          Lafoto may use selected images or excerpts from delivered work for portfolio presentation, website display, social media, studio samples, exhibitions, or professional promotion,
+          unless the client has requested additional confidentiality in writing before or at the time of booking. Any such use will be made with professional care and respect.
+        </p>
+
+        <h3>10. Limitation of Liability</h3>
+        <p>
+          While every reasonable effort is made to provide secure, professional service, Lafoto shall not be liable for losses caused by circumstances beyond reasonable control,
+          including but not limited to equipment failure despite backup measures, venue restrictions, acts of God, extreme weather, travel disruption, illness, civil disturbance,
+          or data loss arising from causes that could not reasonably be prevented. In any event, liability is limited to the amount paid by the client for the affected services.
+        </p>
+
+        <h3>11. Storage and Archiving</h3>
+        <p>
+          Delivered files should be downloaded and stored safely by the client as soon as possible. While Lafoto may retain archived copies for a period of time,
+          long-term storage is not guaranteed unless specifically agreed. Re-delivery of archived material, if available, may be subject to an administrative fee.
+        </p>
+
+        <h3>12. Governing Communication</h3>
+        <p>
+          These terms should be read together with any written quotation, invoice, message exchange, or booking confirmation related to the event.
+          In the event of inconsistency, the specific written agreement for the booking takes priority over general website wording.
+        </p>
+
+        <div class="contact-box">
+          <h3>Contact Information</h3>
+          <p>
+            Lafoto<br>
+            Wedding Photography &amp; Cinematography<br>
+            Phone / WhatsApp: <a href="tel:+306936897702">6936897702</a><br>
+            Email: <a href="mailto:lafotostudio2025@gmail.com">lafotostudio2025@gmail.com</a><br>
+            Instagram: <a href="https://www.instagram.com/lafoto_visual_essence/" target="_blank" rel="noopener">@lafoto_visual_essence</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="lang-block" id="terms-el">
+        <span class="lang-label">Ελληνικά</span>
+        <h2>Όροι και Προϋποθέσεις</h2>
+
+        <h3>1. Υπηρεσίες</h3>
+        <p>
+          Η Lafoto παρέχει υπηρεσίες φωτογράφισης γάμου και, όπου έχει συμφωνηθεί, κινηματογραφικής κάλυψης γάμου για πολιτικές ή θρησκευτικές τελετές,
+          προετοιμασία, δεξίωση, πορτρέτα ζευγαριού και άλλες σχετικές στιγμές. Το ακριβές εύρος των υπηρεσιών καθορίζεται από την ατομική συμφωνία,
+          τη γραπτή επιβεβαίωση ή την προσφορά που έχει αποδεχθεί ο πελάτης.
+        </p>
+
+        <h3>2. Κράτηση και Επιβεβαίωση</h3>
+        <p>
+          Μια ημερομηνία θεωρείται δεσμευμένη μόνο μετά από γραπτή επιβεβαίωση και την καταβολή της συμφωνημένης προκαταβολής ή αμοιβής κράτησης.
+          Αρχικές συνομιλίες, έλεγχος διαθεσιμότητας ή προφορικές συζητήσεις δεν δεσμεύουν ημερομηνία. Η Lafoto διατηρεί το δικαίωμα να αποδεσμεύσει
+          μη επιβεβαιωμένη ημερομηνία εφόσον υπάρξει άλλη οριστική κράτηση.
+        </p>
+
+        <h3>3. Πληρωμές</h3>
+        <p>
+          Η τιμή, η δομή των δόσεων και οι ημερομηνίες πληρωμής γνωστοποιούνται πριν από την κράτηση. Εκτός αν έχει συμφωνηθεί διαφορετικά εγγράφως,
+          η προκαταβολή δεν επιστρέφεται και συμψηφίζεται με το συνολικό ποσό της υπηρεσίας. Η τελική παράδοση μπορεί να ανασταλεί έως ότου εξοφληθούν
+          όλες οι συμφωνημένες πληρωμές. Πρόσθετες υπηρεσίες, επιπλέον ώρες, άλμπουμ, εκτυπώσεις ή επιπλέον τροποποιήσεις πέραν της αρχικής συμφωνίας
+          ενδέχεται να χρεώνονται χωριστά.
+        </p>
+
+        <h3>4. Ακυρώσεις και Αλλαγές</h3>
+        <p>
+          Σε περίπτωση ακύρωσης από τον πελάτη, η προκαταβολή παραμένει μη επιστρεπτέα, καθώς η ημερομηνία έχει δεσμευτεί και ενδέχεται να έχουν απορριφθεί
+          άλλες εργασίες. Αν η ακύρωση γίνει κοντά στην ημερομηνία του γεγονότος, η Lafoto δύναται να διατηρήσει και επιπλέον ποσά που έχουν ήδη καταστεί απαιτητά
+          βάσει του συμφωνημένου προγράμματος πληρωμών. Η αλλαγή ημερομηνίας εξαρτάται από τη διαθεσιμότητα και δεν μπορεί να θεωρηθεί δεδομένη.
+          Αν η Lafoto αδυνατεί να προσφέρει τις υπηρεσίες λόγω σοβαρής ασθένειας, έκτακτης ανάγκης, ατυχήματος ή ανωτέρας βίας, θα καταβληθεί κάθε εύλογη προσπάθεια
+          για αντικατάσταση από άλλο επαγγελματία ή για επιστροφή χρημάτων που αφορούν μη παρασχεθείσες υπηρεσίες, όπου αυτό κρίνεται κατάλληλο.
+        </p>
+
+        <h3>5. Κάλυψη και Συνεργασία</h3>
+        <p>
+          Η ποιότητα και η πληρότητα της κάλυψης εξαρτώνται από το πρόγραμμα της ημέρας, τις συνθήκες του χώρου, τον καιρό, το διαθέσιμο φως,
+          τη ροή του γεγονότος και τη συνεργασία των πελατών. Οι πελάτες είναι υπεύθυνοι να εξασφαλίσουν εύλογη πρόσβαση, άδειες και σωστή οργάνωση.
+          Η Lafoto δεν ευθύνεται για χαμένες λήψεις που οφείλονται σε καθυστερήσεις, περιορισμούς από χώρους ή τελετάρχες, παρεμβάσεις καλεσμένων,
+          επικίνδυνες συνθήκες ή γεγονότα εκτός επαγγελματικού ελέγχου.
+        </p>
+
+        <h3>6. Επιμέλεια και Καλλιτεχνική Κρίση</h3>
+        <p>
+          Ο πελάτης αναγνωρίζει ότι επιλέγει τη Lafoto για συγκεκριμένο προσωπικό ύφος και επαγγελματική κρίση. Η επιλογή εικόνων, η χρωματική επεξεργασία,
+          το κάδρο, το ρετούς και οι τελικές αποφάσεις επιμέλειας παραμένουν στην ευχέρεια της Lafoto. Μη επεξεργασμένα αρχεία, RAW αρχεία ή το σύνολο
+          των λήψεων δεν περιλαμβάνονται, εκτός αν έχει συμφωνηθεί ρητά γραπτώς.
+        </p>
+
+        <h3>7. Χρόνοι Παράδοσης</h3>
+        <p>
+          Οι χρόνοι παράδοσης διαφέρουν ανάλογα με την εποχή, τον φόρτο εργασίας και την έκταση του έργου. Δείγματα, πλήρεις γκαλερί, ταινίες, άλμπουμ
+          ή άλλα παραδοτέα παραδίδονται εντός εύλογου χρονικού διαστήματος που γνωστοποιείται στον πελάτη μετά το γεγονός ή κατά την κράτηση.
+          Οι ημερομηνίες παράδοσης αποτελούν εκτίμηση και όχι απόλυτα εγγυημένη προθεσμία, εκτός αν έχει συμφωνηθεί ρητά κάτι διαφορετικό.
+          Μικρές καθυστερήσεις λόγω υψηλής σεζόν, τεχνικής επεξεργασίας ή χρονοδιαγραμμάτων προμηθευτών δεν συνιστούν παραβίαση συμφωνίας.
+        </p>
+
+        <h3>8. Πνευματική Ιδιοκτησία και Δικαιώματα Χρήσης</h3>
+        <p>
+          Τα πνευματικά δικαιώματα όλων των φωτογραφιών, ταινιών, επεξεργασμένων αρχείων και συναφών υλικών παραμένουν στη Lafoto,
+          εκτός αν έχει συμφωνηθεί διαφορετικά εγγράφως. Ο πελάτης λαμβάνει προσωπική, μη αποκλειστική και μη μεταβιβάσιμη άδεια χρήσης για ιδιωτική χρήση,
+          κοινοποίηση σε συγγενείς και φίλους και προσωπική ανάρτηση στα κοινωνικά δίκτυα, υπό την προϋπόθεση ότι το έργο δεν αλλοιώνεται με τρόπο που θίγει την ακεραιότητά του.
+          Εμπορική χρήση, μεταπώληση, δημοσίευση σε τρίτους, διαφημιστική αξιοποίηση ή μεταβίβαση δικαιωμάτων απαιτεί προηγούμενη γραπτή άδεια.
+        </p>
+
+        <h3>9. Χρήση για Portfolio και Προβολή</h3>
+        <p>
+          Η Lafoto μπορεί να χρησιμοποιήσει επιλεγμένες εικόνες ή αποσπάσματα του παραδοθέντος έργου για παρουσίαση portfolio, ιστοσελίδα, κοινωνικά δίκτυα,
+          δείγματα στούντιο, εκθέσεις ή επαγγελματική προβολή, εκτός αν ο πελάτης έχει ζητήσει αυξημένη εμπιστευτικότητα εγγράφως πριν ή κατά την κράτηση.
+          Κάθε τέτοια χρήση γίνεται με επαγγελματισμό και σεβασμό.
+        </p>
+
+        <h3>10. Περιορισμός Ευθύνης</h3>
+        <p>
+          Παρότι λαμβάνεται κάθε εύλογο μέτρο για ασφαλή και επαγγελματική παροχή υπηρεσιών, η Lafoto δεν ευθύνεται για απώλειες που οφείλονται σε γεγονότα
+          πέρα από τον εύλογο έλεγχό της, συμπεριλαμβανομένων ενδεικτικά βλάβης εξοπλισμού παρά την ύπαρξη εφεδρειών, περιορισμών χώρου, ακραίων καιρικών φαινομένων,
+          ταξιδιωτικών προβλημάτων, ασθένειας, κοινωνικών αναταραχών ή απώλειας δεδομένων από αιτίες που δεν μπορούσαν εύλογα να προληφθούν.
+          Σε κάθε περίπτωση, η ευθύνη περιορίζεται στο ποσό που έχει καταβάλει ο πελάτης για τις επηρεαζόμενες υπηρεσίες.
+        </p>
+
+        <h3>11. Αποθήκευση και Αρχειοθέτηση</h3>
+        <p>
+          Τα παραδοθέντα αρχεία πρέπει να αποθηκεύονται με ασφάλεια από τον πελάτη το συντομότερο δυνατό. Παρότι η Lafoto μπορεί να διατηρεί αρχειακά αντίγραφα
+          για κάποιο χρονικό διάστημα, η μακροχρόνια φύλαξη δεν θεωρείται εγγυημένη, εκτός αν υπάρχει ειδική συμφωνία. Επανεκπομπή ή επαναπαράδοση υλικού,
+          εφόσον είναι διαθέσιμο, ενδέχεται να επιβαρύνεται με διοικητική χρέωση.
+        </p>
+
+        <h3>12. Ισχύς Επικοινωνίας και Συμφωνιών</h3>
+        <p>
+          Οι παρόντες όροι διαβάζονται σε συνδυασμό με κάθε γραπτή προσφορά, τιμολόγιο, ανταλλαγή μηνυμάτων ή επιβεβαίωση κράτησης που σχετίζεται με το γεγονός.
+          Σε περίπτωση αντίφασης, υπερισχύει η ειδική γραπτή συμφωνία της συγκεκριμένης κράτησης.
+        </p>
+
+        <div class="contact-box">
+          <h3>Στοιχεία Επικοινωνίας</h3>
+          <p>
+            Lafoto<br>
+            Wedding Photography &amp; Cinematography<br>
+            Τηλέφωνο / WhatsApp: <a href="tel:+306936897702">6936897702</a><br>
+            Email: <a href="mailto:lafotostudio2025@gmail.com">lafotostudio2025@gmail.com</a><br>
+            Instagram: <a href="https://www.instagram.com/lafoto_visual_essence/" target="_blank" rel="noopener">@lafoto_visual_essence</a>
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

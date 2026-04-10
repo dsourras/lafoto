@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lafoto | Wedding Photography & Cinematography</title>
+  <meta
+    name="description"
+    content="Lafoto — wedding photography & cinematography by Dimitris Sourras. Quiet, refined and timeless wedding storytelling in Larissa, Greece and beyond."
+  />
+  <meta
+    name="keywords"
+    content="wedding photographer Greece, wedding photography Larissa, destination wedding photographer, Lafoto, Dimitris Sourras, cinematography"
+  />
+  <meta name="theme-color" content="#0b0b0d" />
+  <meta property="og:title" content="Lafoto | Wedding Photography & Cinematography" />
+  <meta
+    property="og:description"
+    content="Refined wedding photography and cinematography with calm direction, emotional depth and timeless visual clarity."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logo.png" />
+  <meta property="og:locale" content="el_GR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lafoto | Wedding Photography & Cinematography" />
+  <meta
+    name="twitter:description"
+    content="Quiet, refined wedding photography and cinematography in Larissa, Greece and beyond."
+  />
+  <meta name="twitter:image" content="logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root{
+      --bg:#0b0b0d;
+      --bg-soft:#121215;
+      --panel:rgba(255,255,255,0.04);
+      --panel-strong:rgba(255,255,255,0.065);
+      --stroke:rgba(255,255,255,0.10);
+      --stroke-soft:rgba(255,255,255,0.06);
+      --text:#f5f1ea;
+      --muted:#c8c1b8;
+      --soft:#a89f95;
+      --accent:#dbc2a1;
+      --accent-2:#b59a79;
+      --shadow:0 24px 80px rgba(0,0,0,0.34);
+      --radius:24px;
+      --radius-lg:34px;
+      --radius-xl:40px;
+      --max:1360px;
+      --header-h:84px;
+    }
+
+    *,
+    *::before,
+    *::after{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{scroll-behavior:smooth}
+
+    body{
+      font-family:"Inter",sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(255,255,255,0.04), transparent 32%),
+        radial-gradient(circle at 80% 10%, rgba(219,194,161,0.05), transparent 22%),
+        linear-gradient(180deg,#09090b 0%,#0b0b0d 100%);
+      color:var(--text);
+      overflow-x:hidden;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    button{
+      font:inherit;
+      border:none;
+      background:none;
+    }
+
+    .grain{
+      pointer-events:none;
+      position:fixed;
+      inset:0;
+      opacity:0.035;
+      background-image:
+        radial-gradient(circle at 25% 25%, rgba(255,255,255,0.5) 0 0.55px, transparent 0.75px),
+        radial-gradient(circle at 75% 75%, rgba(255,255,255,0.35) 0 0.45px, transparent 0.65px);
+      background-size:20px 20px, 24px 24px;
+      z-index:9999;
+      mix-blend-mode:soft-light;
+    }
+
+    .page-shell{
+      position:relative;
+      width:min(var(--max), calc(100% - 40px));
+      margin:0 auto;
+    }
+
+    header{
+      position:fixed;
+      top:14px;
+      left:50%;
+      transform:translateX(-50%);
+      width:min(var(--max), calc(100% - 24px));
+      z-index:1000;
+      padding:10px 14px;
+      border:1px solid var(--stroke);
+      background:rgba(10,10,12,0.56);
+      backdrop-filter:blur(18px) saturate(150%);
+      -webkit-backdrop-filter:blur(18px) saturate(150%);
+      border-radius:999px;
+      box-shadow:0 14px 44px rgba(0,0,0,0.26);
+    }
+
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      min-height:52px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:0;
+    }
+
+    .brand img{
+  width:auto;
+  height:42px;
+  padding:8px;
+  object-fit:contain;
+  flex-shrink:0;
+
+  background:linear-gradient(180deg, #f5efe6 0%, #eee4d4 100%);
+  border:1px solid rgba(0,0,0,0.05);
+  border-radius:14px;
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.22),
+    inset 0 1px 0 rgba(255,255,255,0.55);
+}
+
+    .brand-copy{
+      display:flex;
+      flex-direction:column;
+      line-height:1;
+      min-width:0;
+    }
+
+    .brand-title{
+      font-family:"Cormorant Garamond",serif;
+      font-size:1.38rem;
+      letter-spacing:0.02em;
+      font-weight:600;
+      color:#f7f2eb;
+    }
+
+    .brand-sub{
+      margin-top:4px;
+      font-size:0.70rem;
+      color:var(--muted);
+      letter-spacing:0.16em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+
+    .desktop-nav{
+      display:flex;
+      align-items:center;
+      gap:18px;
+    }
+
+    .desktop-nav a{
+      position:relative;
+      font-size:0.92rem;
+      color:rgba(245,241,234,0.84);
+      transition:color .25s ease;
+    }
+
+    .desktop-nav a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-6px;
+      width:100%;
+      height:1px;
+      background:linear-gradient(90deg,transparent,var(--accent),transparent);
+      transform:scaleX(0);
+      transform-origin:center;
+      transition:transform .28s ease;
+    }
+
+    .desktop-nav a:hover{color:#fff}
+    .desktop-nav a:hover::after{transform:scaleX(1)}
+
+    .header-actions{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-shrink:0;
+    }
+
+    .lang-switch{
+      display:flex;
+      align-items:center;
+      gap:4px;
+      padding:4px;
+      background:rgba(255,255,255,0.04);
+      border:1px solid var(--stroke-soft);
+      border-radius:999px;
+    }
+
+    .lang-btn{
+      cursor:pointer;
+      color:var(--muted);
+      background:transparent;
+      padding:8px 11px;
+      border-radius:999px;
+      transition:all .22s ease;
+    }
+
+    .lang-btn.active{
+      background:#f2eadf;
+      color:#111;
+    }
+
+    .header-cta{
+      border:1px solid rgba(219,194,161,0.22);
+      background:linear-gradient(180deg, rgba(219,194,161,0.16), rgba(219,194,161,0.06));
+      color:#fbf7f2;
+      padding:12px 18px;
+      border-radius:999px;
+      transition:transform .22s ease, background .22s ease, border-color .22s ease;
+      white-space:nowrap;
+    }
+
+    .header-cta:hover{
+      transform:translateY(-1px);
+      border-color:rgba(219,194,161,0.38);
+      background:linear-gradient(180deg, rgba(219,194,161,0.20), rgba(219,194,161,0.09));
+    }
+
+    .mobile-menu-btn{
+      display:none;
+      width:44px;
+      height:44px;
+      border-radius:50%;
+      border:1px solid var(--stroke-soft);
+      background:rgba(255,255,255,0.04);
+      color:#fff;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      flex-shrink:0;
+    }
+
+    .mobile-panel{
+      display:none;
+      margin-top:10px;
+      padding:14px;
+      border-top:1px solid var(--stroke-soft);
+    }
+
+    .mobile-panel.open{display:block}
+
+    .mobile-nav{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-bottom:14px;
+    }
+
+    .mobile-nav a{
+      padding:12px 10px;
+      border-radius:14px;
+      background:rgba(255,255,255,0.03);
+      color:#efe7dd;
+    }
+
+    .mobile-actions{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    main{
+      padding-top:calc(var(--header-h) + 34px);
+    }
+
+    .hero{
+      position:relative;
+      min-height:calc(100vh - 40px);
+      display:grid;
+      align-items:end;
+      padding:28px 0 22px;
+    }
+
+    .hero-card{
+      position:relative;
+      min-height:88vh;
+      border-radius:var(--radius-xl);
+      overflow:hidden;
+      border:1px solid var(--stroke);
+      box-shadow:var(--shadow);
+      background:#101012;
+    }
+
+    .hero-slides{
+      position:absolute;
+      inset:0;
+    }
+
+    .hero-slide{
+      position:absolute;
+      inset:0;
+      opacity:0;
+      transition:opacity 1.35s ease;
+      will-change:opacity;
+    }
+
+    .hero-slide.active{
+      opacity:1;
+    }
+
+    .hero-slide img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transform:scale(1.04);
+      filter:saturate(0.95) contrast(1.02) brightness(0.72);
+    }
+
+    .hero-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:2;
+      background:
+        linear-gradient(180deg, rgba(7,7,9,0.20) 0%, rgba(7,7,9,0.42) 48%, rgba(7,7,9,0.82) 100%),
+        radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.12) 70%, rgba(0,0,0,0.30) 100%);
+    }
+
+    .hero-fade{
+      position:absolute;
+      inset:auto 0 0 0;
+      height:200px;
+      z-index:3;
+      background:linear-gradient(180deg, transparent, rgba(7,7,9,0.76));
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:4;
+      display:grid;
+      align-items:end;
+      grid-template-columns:1.12fr 0.88fr;
+      gap:28px;
+      min-height:88vh;
+      padding:clamp(30px,4vw,62px);
+    }
+
+    .hero-copy{
+      max-width:760px;
+      align-self:center;
+      padding-top:86px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:8px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.12);
+      background:rgba(255,255,255,0.05);
+      color:#eee4d7;
+      font-size:0.78rem;
+      letter-spacing:0.15em;
+      text-transform:uppercase;
+      backdrop-filter:blur(8px);
+      margin-bottom:20px;
+    }
+
+    .hero h1{
+      font-family:"Cormorant Garamond",serif;
+      font-size:clamp(3.2rem, 7vw, 6.8rem);
+      line-height:0.90;
+      letter-spacing:-0.035em;
+      font-weight:600;
+      max-width:10.5ch;
+      text-wrap:balance;
+    }
+
+    .hero h1 span{
+      display:block;
+    }
+
+    .hero h1 span + span{
+      color:var(--accent);
+      font-style:italic;
+      font-weight:500;
+      margin-top:6px;
+    }
+
+    .hero-lead{
+      margin-top:24px;
+      max-width:60ch;
+      font-size:1.02rem;
+      line-height:1.9;
+      color:rgba(245,241,234,0.82);
+    }
+
+    .hero-actions{
+      margin-top:30px;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:52px;
+      padding:14px 22px;
+      border-radius:999px;
+      transition:transform .22s ease, background .22s ease, border-color .22s ease, color .22s ease;
+      border:1px solid transparent;
+    }
+
+    .btn-primary{
+      background:#f3eadf;
+      color:#111;
+      box-shadow:0 10px 30px rgba(243,234,223,0.14);
+    }
+
+    .btn-primary:hover{transform:translateY(-1px)}
+
+    .btn-secondary{
+      border-color:rgba(255,255,255,0.16);
+      background:rgba(255,255,255,0.06);
+      color:#fff;
+      backdrop-filter:blur(8px);
+    }
+
+    .btn-secondary:hover{
+      transform:translateY(-1px);
+      background:rgba(255,255,255,0.09);
+      border-color:rgba(255,255,255,0.24);
+    }
+
+    .hero-side{
+      align-self:end;
+      justify-self:end;
+      width:min(400px,100%);
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+
+    .glass-card{
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.10);
+      backdrop-filter:blur(12px);
+      border-radius:26px;
+      padding:22px;
+      box-shadow:0 20px 40px rgba(0,0,0,0.18);
+    }
+
+    .quiet-note{
+      line-height:1.85;
+      color:rgba(245,241,234,0.80);
+      font-size:0.95rem;
+    }
+
+    .hero-meta{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+    }
+
+    .meta-tile{
+      padding:18px;
+      border-radius:20px;
+      background:rgba(255,255,255,0.045);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .meta-tile strong{
+      display:block;
+      font-family:"Cormorant Garamond",serif;
+      font-size:1.48rem;
+      color:#f8f2ea;
+      margin-bottom:4px;
+    }
+
+    .meta-tile span{
+      font-size:0.84rem;
+      color:var(--muted);
+      line-height:1.6;
+    }
+
+    .section{
+      padding:42px 0 0;
+    }
+
+    .section-block{
+      padding:42px 0 0;
+    }
+
+    .section-head{
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:22px;
+      margin-bottom:24px;
+    }
+
+    .section-kicker{
+      color:var(--accent);
+      letter-spacing:0.18em;
+      text-transform:uppercase;
+      font-size:0.74rem;
+      margin-bottom:10px;
+    }
+
+    h2{
+      font-family:"Cormorant Garamond",serif;
+      font-size:clamp(2.6rem,4vw,4.2rem);
+      line-height:0.94;
+      font-weight:600;
+      letter-spacing:-0.03em;
+      text-wrap:balance;
+    }
+
+    .section-desc{
+      max-width:58ch;
+      color:var(--muted);
+      line-height:1.9;
+      font-size:0.98rem;
+    }
+
+    .portfolio-controls{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:42px;
+      padding:10px 16px;
+      border-radius:999px;
+      border:1px solid var(--stroke-soft);
+      background:rgba(255,255,255,0.04);
+      color:#f0e7dc;
+      cursor:pointer;
+      transition:all .22s ease;
+    }
+
+    .chip.active,
+    .chip:hover{
+      background:rgba(219,194,161,0.12);
+      border-color:rgba(219,194,161,0.22);
+      color:#fff;
+    }
+
+    .masonry{
+      columns:4 260px;
+      column-gap:18px;
+    }
+
+    .masonry-item{
+      position:relative;
+      break-inside:avoid;
+      margin-bottom:18px;
+      border-radius:22px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.08);
+      background:#101013;
+      box-shadow:0 12px 30px rgba(0,0,0,0.18);
+      cursor:pointer;
+      transition:transform .24s ease, border-color .24s ease;
+    }
+
+    .masonry-item:hover{
+      transform:translateY(-2px);
+      border-color:rgba(255,255,255,0.13);
+    }
+
+    .masonry-item img{
+      width:100%;
+      display:block;
+      transition:transform .7s ease, filter .45s ease;
+      will-change:transform;
+      background:#0f0f12;
+    }
+
+    .masonry-item:hover img{
+      transform:scale(1.04);
+      filter:saturate(1.02) contrast(1.01);
+    }
+
+    .masonry-item::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, transparent 35%, rgba(0,0,0,0.24) 100%);
+      opacity:0;
+      transition:opacity .28s ease;
+    }
+
+    .masonry-item:hover::after{opacity:1}
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:minmax(0,0.92fr) minmax(0,1.08fr);
+      gap:26px;
+      align-items:stretch;
+    }
+
+    .portrait-card{
+      padding:16px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+      border:1px solid rgba(255,255,255,0.10);
+      border-radius:30px;
+      box-shadow:var(--shadow);
+      min-height:100%;
+    }
+
+    .portrait-frame{
+      position:relative;
+      border-radius:24px;
+      overflow:hidden;
+      min-height:100%;
+      background:#111;
+    }
+
+    .portrait-frame img{
+      width:100%;
+      height:100%;
+      min-height:620px;
+      object-fit:cover;
+      filter:contrast(1.01) saturate(0.95);
+    }
+
+    .about-card{
+      padding:32px;
+      border-radius:30px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.032));
+      border:1px solid rgba(255,255,255,0.10);
+      box-shadow:var(--shadow);
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:24px;
+    }
+
+    .about-copy h3{
+      font-family:"Cormorant Garamond",serif;
+      font-size:clamp(2.2rem,4vw,3.25rem);
+      line-height:0.95;
+      font-weight:600;
+      margin-bottom:16px;
+    }
+
+    .signature{
+      color:var(--accent);
+      font-style:italic;
+      font-weight:500;
+      font-family:"Cormorant Garamond",serif;
+    }
+
+    .about-copy p{
+      line-height:1.95;
+      color:rgba(245,241,234,0.84);
+      margin-bottom:16px;
+      font-size:0.98rem;
+    }
+
+    .stat-rail{
+      width:220px;
+      padding:20px;
+      border-radius:24px;
+      background:rgba(255,255,255,0.035);
+      border:1px solid rgba(255,255,255,0.08);
+      align-self:start;
+    }
+
+    .stat{
+      padding:18px 0;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+
+    .stat:last-child{border-bottom:none}
+
+    .stat strong{
+      display:block;
+      font-family:"Cormorant Garamond",serif;
+      font-size:1.95rem;
+      color:#f6efe5;
+      margin-bottom:4px;
+      line-height:1;
+    }
+
+    .stat span{
+      color:var(--muted);
+      line-height:1.7;
+      font-size:0.9rem;
+    }
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
+    }
+
+    .service-card{
+      padding:28px 26px;
+      border-radius:24px;
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.09);
+      box-shadow:0 14px 34px rgba(0,0,0,0.14);
+    }
+
+    .service-card h4{
+      font-family:"Cormorant Garamond",serif;
+      font-size:1.8rem;
+      font-weight:600;
+      margin-bottom:12px;
+    }
+
+    .service-card p{
+      color:var(--muted);
+      line-height:1.9;
+      font-size:0.96rem;
+    }
+
+    .quote{
+      margin-top:18px;
+      padding:32px;
+      border-radius:28px;
+      border:1px solid rgba(255,255,255,0.09);
+      background:rgba(255,255,255,0.035);
+      text-align:center;
+    }
+
+    .quote p{
+      font-family:"Cormorant Garamond",serif;
+      font-size:clamp(1.7rem,3vw,2.5rem);
+      line-height:1.28;
+      color:#f5ede3;
+      max-width:26ch;
+      margin:0 auto;
+    }
+
+    .quote span{
+      display:block;
+      margin-top:12px;
+      color:var(--muted);
+      letter-spacing:0.12em;
+      text-transform:uppercase;
+      font-size:0.78rem;
+    }
+
+    .contact-shell{
+      position:relative;
+      overflow:hidden;
+      padding:0;
+      border-radius:34px;
+      border:1px solid rgba(255,255,255,0.10);
+      background:#111;
+      box-shadow:var(--shadow);
+    }
+
+    .contact-bg{
+      position:absolute;
+      inset:0;
+      z-index:0;
+    }
+
+    .contact-bg img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:brightness(0.34) saturate(0.92);
+    }
+
+    .contact-shell::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(90deg, rgba(8,8,10,0.84), rgba(8,8,10,0.62));
+      z-index:1;
+    }
+
+    .contact-grid{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1.08fr 0.92fr;
+      gap:24px;
+      padding:38px;
+    }
+
+    .contact-copy h3{
+      font-family:"Cormorant Garamond",serif;
+      font-size:clamp(2.3rem,4vw,3.7rem);
+      line-height:0.95;
+      font-weight:600;
+      margin-bottom:14px;
+    }
+
+    .contact-copy p{
+      max-width:54ch;
+      line-height:1.9;
+      color:rgba(245,241,234,0.82);
+    }
+
+    .contact-actions{
+      margin-top:22px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .contact-panel{
+      padding:26px;
+      border-radius:26px;
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.10);
+      backdrop-filter:blur(12px);
+      align-self:start;
+    }
+
+    .contact-list{
+      display:grid;
+      gap:14px;
+    }
+
+    .contact-item{
+      padding:14px 0;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+
+    .contact-item:last-child{border-bottom:none}
+
+    .contact-item small{
+      display:block;
+      color:var(--soft);
+      letter-spacing:0.12em;
+      text-transform:uppercase;
+      font-size:0.72rem;
+      margin-bottom:6px;
+    }
+
+    .contact-item span,
+    .contact-item a{
+      color:#f7efe6;
+      line-height:1.8;
+      word-break:break-word;
+    }
+
+    footer{
+      padding:24px 0 40px;
+    }
+
+    .footer-card{
+      border:1px solid rgba(255,255,255,0.09);
+      border-radius:28px;
+      background:rgba(255,255,255,0.03);
+      padding:26px;
+      display:grid;
+      grid-template-columns:1.2fr 1fr 1fr 1fr;
+      gap:18px;
+    }
+
+    .footer-brand img{
+  height:48px;
+  width:auto;
+  padding:9px;
+  object-fit:contain;
+  margin-bottom:14px;
+
+  background:linear-gradient(180deg, #f5efe6 0%, #eee4d4 100%);
+  border:1px solid rgba(0,0,0,0.05);
+  border-radius:16px;
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.55);
+}
+
+    .footer-brand p,
+    .footer-col a,
+    .footer-col div{
+      color:var(--muted);
+      line-height:1.85;
+      font-size:0.95rem;
+    }
+
+    .footer-col h5{
+      margin-bottom:10px;
+      font-size:0.82rem;
+      letter-spacing:0.16em;
+      text-transform:uppercase;
+      color:#f6eee4;
+    }
+
+    .footer-links{
+      display:grid;
+      gap:8px;
+    }
+
+    .footer-bottom{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      color:var(--soft);
+      font-size:0.84rem;
+      padding-top:14px;
+    }
+
+    .floating-wa{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:1001;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:13px 18px;
+      border-radius:999px;
+      background:linear-gradient(180deg, rgba(243,234,223,0.95), rgba(231,219,204,0.95));
+      color:#111;
+      border:1px solid rgba(255,255,255,0.38);
+      box-shadow:0 16px 40px rgba(0,0,0,0.28);
+      transition:transform .22s ease;
+    }
+
+    .floating-wa:hover{transform:translateY(-2px)}
+
+    .lightbox{
+      position:fixed;
+      inset:0;
+      z-index:5000;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:26px;
+      background:rgba(0,0,0,0.88);
+      backdrop-filter:blur(10px);
+    }
+
+    .lightbox.open{display:flex}
+
+    .lightbox-inner{
+      position:relative;
+      width:min(1240px, 100%);
+      max-height:92vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .lightbox img{
+      max-width:100%;
+      max-height:92vh;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,0.12);
+      box-shadow:0 30px 80px rgba(0,0,0,0.45);
+      background:#0d0d10;
+    }
+
+    .lightbox-btn,
+    .lightbox-close{
+      position:absolute;
+      width:52px;
+      height:52px;
+      border-radius:50%;
+      border:1px solid rgba(255,255,255,0.16);
+      background:rgba(255,255,255,0.06);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      backdrop-filter:blur(10px);
+      transition:background .22s ease, transform .22s ease;
+    }
+
+    .lightbox-btn:hover,
+    .lightbox-close:hover{
+      background:rgba(255,255,255,0.12);
+      transform:translateY(-1px);
+    }
+
+    .lightbox-prev{
+      left:10px;
+      top:50%;
+      transform:translateY(-50%);
+    }
+
+    .lightbox-next{
+      right:10px;
+      top:50%;
+      transform:translateY(-50%);
+    }
+
+    .lightbox-close{
+      top:10px;
+      right:10px;
+    }
+
+    .lightbox-caption{
+      position:absolute;
+      left:50%;
+      bottom:16px;
+      transform:translateX(-50%);
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.10);
+      background:rgba(255,255,255,0.06);
+      color:#f4ece2;
+      font-size:0.86rem;
+      backdrop-filter:blur(10px);
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(24px);
+      transition:opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal.is-visible{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    @media (max-width: 1180px){
+      .hero-content{grid-template-columns:1fr}
+      .hero-side{
+        width:100%;
+        max-width:none;
+        justify-self:stretch;
+      }
+      .about-card{grid-template-columns:1fr}
+      .stat-rail{width:100%}
+      .services{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .footer-card{grid-template-columns:1fr 1fr}
+    }
+
+    @media (max-width: 900px){
+      header{
+        top:10px;
+        width:calc(100% - 16px);
+        padding:8px 10px;
+      }
+
+      .desktop-nav,
+      .header-actions .header-cta{
+        display:none;
+      }
+
+      .mobile-menu-btn{display:flex}
+
+      .brand-title{font-size:1.22rem}
+      .brand-sub{font-size:0.66rem}
+
+      main{padding-top:92px}
+      .page-shell{width:min(var(--max), calc(100% - 16px))}
+      .hero{padding-top:0}
+
+      .hero-card{
+        min-height:78vh;
+        border-radius:28px;
+      }
+
+      .hero-content{
+        min-height:78vh;
+        padding:24px 18px 18px;
+        gap:18px;
+      }
+
+      .hero-copy{padding-top:44px}
+
+      .hero h1{
+        font-size:clamp(2.8rem, 12vw, 4.3rem);
+        max-width:12ch;
+      }
+
+      .hero-lead{
+        font-size:0.98rem;
+        line-height:1.84;
+      }
+
+      .eyebrow{
+        font-size:0.70rem;
+        letter-spacing:0.12em;
+      }
+
+      .hero-actions{gap:10px}
+      .btn-primary,.btn-secondary{width:100%}
+      .hero-meta{grid-template-columns:1fr 1fr}
+      .section-head{flex-direction:column;align-items:start}
+      .about-grid{grid-template-columns:1fr}
+      .portrait-frame img{min-height:420px}
+      .contact-grid{padding:22px}
+      .footer-card{grid-template-columns:1fr}
+
+      .footer-bottom{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .floating-wa{
+        right:12px;
+        bottom:12px;
+        padding:12px 16px;
+      }
+
+      .lightbox-btn{display:none}
+    }
+
+    @media (max-width: 560px){
+      .hero-meta{grid-template-columns:1fr}
+      .section-block{padding-top:34px}
+      .masonry{columns:2 140px;column-gap:12px}
+      .masonry-item{margin-bottom:12px;border-radius:18px}
+      .about-card,.portrait-card,.quote,.contact-panel,.service-card{border-radius:22px}
+      .contact-shell{border-radius:26px}
+      .hero-card{border-radius:24px}
+      .footer-card{border-radius:22px;padding:20px}
+      .contact-grid{padding:18px}
+      .quote p{max-width:18ch}
+      .lang-switch{order:2}
+    }
+  </style>
+</head>
+<body>
+  <div class="grain"></div>
+
+  <header>
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Lafoto home">
+        <img src="logo.png" alt="Lafoto logo">
+        <div class="brand-copy">
+          <span class="brand-title">Lafoto</span>
+          <span class="brand-sub" data-el="Visual Essence" data-en="Visual Essence">Visual Essence</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary">
+        <a href="#home" data-el="Αρχική" data-en="Home">Αρχική</a>
+        <a href="#portfolio" data-el="Portfolio" data-en="Portfolio">Portfolio</a>
+        <a href="#about" data-el="Η ιστορία μου" data-en="My story">Η ιστορία μου</a>
+        <a href="#experience" data-el="Προσέγγιση" data-en="Approach">Προσέγγιση</a>
+        <a href="#contact" data-el="Επικοινωνία" data-en="Contact">Επικοινωνία</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" aria-label="Language switcher">
+          <button class="lang-btn active" data-lang="el" type="button">EL</button>
+          <button class="lang-btn" data-lang="en" type="button">EN</button>
+        </div>
+        <a class="header-cta" href="#contact" data-el="Επικοινωνία" data-en="Get in touch">Επικοινωνία</a>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" type="button">
+        ☰
+      </button>
+    </div>
+
+    <div class="mobile-panel" id="mobilePanel">
+      <nav class="mobile-nav" aria-label="Mobile">
+        <a href="#home" data-el="Αρχική" data-en="Home">Αρχική</a>
+        <a href="#portfolio" data-el="Portfolio" data-en="Portfolio">Portfolio</a>
+        <a href="#about" data-el="Η ιστορία μου" data-en="My story">Η ιστορία μου</a>
+        <a href="#experience" data-el="Προσέγγιση" data-en="Approach">Προσέγγιση</a>
+        <a href="#contact" data-el="Επικοινωνία" data-en="Contact">Επικοινωνία</a>
+      </nav>
+      <div class="mobile-actions">
+        <div class="lang-switch" aria-label="Language switcher mobile">
+          <button class="lang-btn active" data-lang="el" type="button">EL</button>
+          <button class="lang-btn" data-lang="en" type="button">EN</button>
+        </div>
+        <a class="header-cta" href="#contact" data-el="Επικοινωνία" data-en="Get in touch">Επικοινωνία</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="page-shell">
+
+      <section class="hero" id="home">
+        <div class="hero-card">
+          <div class="hero-slides" id="heroSlides"></div>
+          <div class="hero-fade"></div>
+
+          <div class="hero-content">
+            <div class="hero-copy reveal">
+              <div class="eyebrow" data-el="Wedding Photography & Cinematography" data-en="Wedding Photography & Cinematography">
+                Wedding Photography & Cinematography
+              </div>
+
+              <h1>
+                <span data-el="Ηρεμία." data-en="Calm.">Ηρεμία.</span>
+                <span data-el="Αλήθεια." data-en="Truth.">Αλήθεια.</span>
+                <span data-el="Μνήμη." data-en="Memory.">Μνήμη.</span>
+              </h1>
+
+              <p
+                class="hero-lead"
+                data-el="Η Lafoto δημιουργεί εικόνες με αίσθηση, μέτρο και ουσία. Με διακριτική παρουσία και προσοχή στη λεπτομέρεια, καταγράφουμε την ημέρα σας όπως πραγματικά τη ζείτε — φυσικά, ήρεμα και με διάρκεια στον χρόνο."
+                data-en="Lafoto creates images with feeling, restraint, and substance. With a discreet presence and close attention to detail, we document your day as you truly live it — naturally, quietly, and with lasting depth."
+              >
+                Η Lafoto δημιουργεί εικόνες με αίσθηση, μέτρο και ουσία. Με διακριτική παρουσία και προσοχή στη λεπτομέρεια, καταγράφουμε την ημέρα σας όπως πραγματικά τη ζείτε — φυσικά, ήρεμα και με διάρκεια στον χρόνο.
+              </p>
+
+              <div class="hero-actions">
+                <a class="btn-primary" href="#portfolio" data-el="Δείτε το portfolio" data-en="View portfolio">Δείτε το portfolio</a>
+                <a class="btn-secondary" href="https://wa.me/306936897702" target="_blank" rel="noopener" data-el="WhatsApp" data-en="WhatsApp">WhatsApp</a>
+              </div>
+            </div>
+
+            <div class="hero-side reveal">
+              <div
+                class="glass-card quiet-note"
+                data-el="Στόχος μου δεν είναι απλώς να αποτυπώσω την εικόνα της ημέρας σας, αλλά να κρατήσω την αίσθησή της. Το φως, τις παύσεις, τις μικρές κινήσεις και εκείνες τις ήσυχες στιγμές που αργότερα θα σημαίνουν τα περισσότερα."
+                data-en="My goal is not simply to record how your day looked, but to preserve how it felt. The light, the pauses, the subtle gestures, and those quiet moments that will later mean the most."
+              >
+                Στόχος μου δεν είναι απλώς να αποτυπώσω την εικόνα της ημέρας σας, αλλά να κρατήσω την αίσθησή της. Το φως, τις παύσεις, τις μικρές κινήσεις και εκείνες τις ήσυχες στιγμές που αργότερα θα σημαίνουν τα περισσότερα.
+              </div>
+
+              <div class="hero-meta">
+                <div class="meta-tile">
+                  <strong>2026–2027</strong>
+                  <span data-el="Διαθεσιμότητα για γάμους στην Ελλάδα και destination weddings." data-en="Availability for weddings in Greece and destination celebrations.">
+                    Διαθεσιμότητα για γάμους στην Ελλάδα και destination weddings.
+                  </span>
+                </div>
+                <div class="meta-tile">
+                  <strong>Larissa</strong>
+                  <span data-el="Με έδρα τη Λάρισα, για ιστορίες που αξίζουν να ειπωθούν με κομψότητα και ειλικρίνεια." data-en="Based in Larissa, for stories that deserve to be told with elegance and honesty.">
+                    Με έδρα τη Λάρισα, για ιστορίες που αξίζουν να ειπωθούν με κομψότητα και ειλικρίνεια.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="portfolio">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker" data-el="Portfolio" data-en="Portfolio">Portfolio</div>
+            <h2 data-el="Στιγμές που κρατούν την αίσθησή τους." data-en="Moments that keep their feeling.">
+              Στιγμές που κρατούν την αίσθησή τους.
+            </h2>
+          </div>
+          <p
+            class="section-desc"
+            data-el="Οι φωτογραφίες εμφανίζονται κάθε φορά σε διαφορετική σειρά, ώστε η εμπειρία να μένει ζωντανή. Η επιλογή είναι ήρεμη και προσεγμένη, αφήνοντας τις εικόνες να έχουν τον πρώτο λόγο."
+            data-en="The photographs appear in a different order each time, so the experience stays alive. The curation remains quiet and deliberate, allowing the images to speak first."
+          >
+            Οι φωτογραφίες εμφανίζονται κάθε φορά σε διαφορετική σειρά, ώστε η εμπειρία να μένει ζωντανή. Η επιλογή είναι ήρεμη και προσεγμένη, αφήνοντας τις εικόνες να έχουν τον πρώτο λόγο.
+          </p>
+        </div>
+
+        <div class="portfolio-controls reveal">
+          <button class="chip active" type="button" id="reshuffleBtn" data-el="Νέα τυχαία σειρά" data-en="Shuffle again">Νέα τυχαία σειρά</button>
+          <button class="chip" type="button" id="topBtn" data-el="Πίσω επάνω" data-en="Back to top">Πίσω επάνω</button>
+        </div>
+
+        <div class="section-block">
+          <div class="masonry reveal" id="masonryGallery"></div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker" data-el="Η ιστορία μου" data-en="My story">Η ιστορία μου</div>
+            <h2 data-el="Πίσω από τον φακό." data-en="Behind the lens.">Πίσω από τον φακό.</h2>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <div class="portrait-card reveal">
+            <div class="portrait-frame">
+              <img src="Sourras.jpg" alt="Dimitris Sourras portrait">
+            </div>
+          </div>
+
+          <div class="about-card reveal">
+            <div class="about-copy">
+              <h3>
+                <span data-el="Δημήτρης Σούρρας" data-en="Dimitris Sourras">Δημήτρης Σούρρας</span>
+                <span class="signature">— Lafoto</span>
+              </h3>
+
+              <p
+                data-el="Είμαι ο Δημήτρης Σούρρας, ο άνθρωπος πίσω από τη Lafoto. Για μένα, η φωτογραφία γάμου δεν είναι επίδειξη. Είναι τρόπος να δίνεις βάρος σε όσα συμβαίνουν γρήγορα και συχνά περνούν απαρατήρητα."
+                data-en="I’m Dimitris Sourras, the person behind Lafoto. To me, wedding photography is not about spectacle. It is a way of giving weight to what happens quickly and might otherwise pass unnoticed."
+              >
+                Είμαι ο Δημήτρης Σούρρας, ο άνθρωπος πίσω από τη Lafoto. Για μένα, η φωτογραφία γάμου δεν είναι επίδειξη. Είναι τρόπος να δίνεις βάρος σε όσα συμβαίνουν γρήγορα και συχνά περνούν απαρατήρητα.
+              </p>
+
+              <p
+                data-el="Με ενδιαφέρει η αλήθεια της εικόνας. Όχι η υπερβολή, αλλά η ατμόσφαιρα. Όχι η ένταση για την ένταση, αλλά η λεπτομέρεια που σε επιστρέφει αργότερα στο συναίσθημα της στιγμής."
+                data-en="I’m drawn to the truth of an image. Not exaggeration, but atmosphere. Not intensity for its own sake, but the detail that later brings you back to the feeling of the moment."
+              >
+                Με ενδιαφέρει η αλήθεια της εικόνας. Όχι η υπερβολή, αλλά η ατμόσφαιρα. Όχι η ένταση για την ένταση, αλλά η λεπτομέρεια που σε επιστρέφει αργότερα στο συναίσθημα της στιγμής.
+              </p>
+
+              <p
+                data-el="Η Lafoto απευθύνεται σε ζευγάρια που αγαπούν την αισθητική, αλλά πάνω απ’ όλα θέλουν να αναγνωρίζουν τον εαυτό τους μέσα στις φωτογραφίες τους. Αυτό αναζητώ κι εγώ: εικόνες με προσωπικότητα, ηρεμία και ουσία."
+                data-en="Lafoto is for couples who care about aesthetics, but above all want to recognize themselves in their photographs. That is what I look for too: images with personality, calm, and substance."
+              >
+                Η Lafoto απευθύνεται σε ζευγάρια που αγαπούν την αισθητική, αλλά πάνω απ’ όλα θέλουν να αναγνωρίζουν τον εαυτό τους μέσα στις φωτογραφίες τους. Αυτό αναζητώ κι εγώ: εικόνες με προσωπικότητα, ηρεμία και ουσία.
+              </p>
+            </div>
+
+            <div class="stat-rail">
+              <div class="stat">
+                <strong data-el="Ήρεμη προσέγγιση" data-en="Calm approach">Ήρεμη προσέγγιση</strong>
+                <span
+                  data-el="Διακριτική παρουσία, χωρίς να βαραίνει την ημέρα."
+                  data-en="A discreet presence that never overwhelms the day.">
+                  Διακριτική παρουσία, χωρίς να βαραίνει την ημέρα.
+                </span>
+              </div>
+              <div class="stat">
+                <strong data-el="Καλλιτεχνική ματιά" data-en="Artistic eye">Καλλιτεχνική ματιά</strong>
+                <span
+                  data-el="Φως, σύνθεση και συναίσθημα σε ισορροπία."
+                  data-en="Light, composition, and emotion held in balance.">
+                  Φως, σύνθεση και συναίσθημα σε ισορροπία.
+                </span>
+              </div>
+              <div class="stat">
+                <strong data-el="Προσωπική σχέση" data-en="Personal connection">Προσωπική σχέση</strong>
+                <span
+                  data-el="Εμπιστοσύνη πριν, κατά τη διάρκεια και μετά τον γάμο."
+                  data-en="Trust before, during, and after the wedding day.">
+                  Εμπιστοσύνη πριν, κατά τη διάρκεια και μετά τον γάμο.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker" data-el="Προσέγγιση" data-en="Approach">Προσέγγιση</div>
+            <h2 data-el="Περισσότερο από κάλυψη." data-en="More than coverage.">Περισσότερο από κάλυψη.</h2>
+          </div>
+          <p
+            class="section-desc"
+            data-el="Ο τρόπος που εργάζομαι είναι ήρεμος, οργανωμένος και ευαίσθητος στον ρυθμό της ημέρας. Το αποτέλεσμα δεν βασίζεται σε θόρυβο ή επιτήδευση, αλλά στην αίσθηση ότι όλα κύλησαν φυσικά."
+            data-en="My way of working is calm, organised, and sensitive to the rhythm of the day. The result does not depend on noise or performance, but on the feeling that everything unfolded naturally."
+          >
+            Ο τρόπος που εργάζομαι είναι ήρεμος, οργανωμένος και ευαίσθητος στον ρυθμό της ημέρας. Το αποτέλεσμα δεν βασίζεται σε θόρυβο ή επιτήδευση, αλλά στην αίσθηση ότι όλα κύλησαν φυσικά.
+          </p>
+        </div>
+
+        <div class="services">
+          <div class="service-card reveal">
+            <h4 data-el="Φωτογραφία γάμου" data-en="Wedding photography">Φωτογραφία γάμου</h4>
+            <p
+              data-el="Από τις προετοιμασίες μέχρι το τέλος της βραδιάς, με σεβασμό στο φως, στη χειρονομία και στη λεπτομέρεια που δίνει βάθος στην αφήγηση."
+              data-en="From the preparations to the final moments of the evening, with respect for light, gesture, and the details that give depth to the story."
+            >
+              Από τις προετοιμασίες μέχρι το τέλος της βραδιάς, με σεβασμό στο φως, στη χειρονομία και στη λεπτομέρεια που δίνει βάθος στην αφήγηση.
+            </p>
+          </div>
+
+          <div class="service-card reveal">
+            <h4 data-el="Κινηματογράφηση" data-en="Cinematography">Κινηματογράφηση</h4>
+            <p
+              data-el="Κίνηση, ατμόσφαιρα και ρυθμός σε μια κινηματογραφική αφήγηση που κρατά τη συναισθηματική ποιότητα της ημέρας χωρίς υπερβολές."
+              data-en="Movement, atmosphere, and rhythm in a cinematic narrative that preserves the emotional quality of the day without excess."
+            >
+              Κίνηση, ατμόσφαιρα και ρυθμός σε μια κινηματογραφική αφήγηση που κρατά τη συναισθηματική ποιότητα της ημέρας χωρίς υπερβολές.
+            </p>
+          </div>
+
+          <div class="service-card reveal">
+            <h4 data-el="Destination weddings" data-en="Destination weddings">Destination weddings</h4>
+            <p
+              data-el="Με την ίδια ήρεμη και διακριτική προσέγγιση, όπου κι αν βρίσκεται η ιστορία σας — στην Ελλάδα ή αλλού."
+              data-en="With the same calm and discreet approach, wherever your story takes place — in Greece or beyond."
+            >
+              Με την ίδια ήρεμη και διακριτική προσέγγιση, όπου κι αν βρίσκεται η ιστορία σας — στην Ελλάδα ή αλλού.
+            </p>
+          </div>
+        </div>
+
+        <div class="quote reveal">
+          <p
+            data-el="«Οι εικόνες που μένουν περισσότερο είναι εκείνες που σε επιστρέφουν στο συναίσθημα, όχι μόνο στη στιγμή.»"
+            data-en="“The images that stay with you the longest are the ones that bring you back to the feeling, not only to the moment.”"
+          >
+            «Οι εικόνες που μένουν περισσότερο είναι εκείνες που σε επιστρέφουν στο συναίσθημα, όχι μόνο στη στιγμή.»
+          </p>
+          <span>Lafoto</span>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="contact-shell reveal">
+          <div class="contact-bg">
+            <img src="mantz-3986.jpg" alt="Lafoto contact background">
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-copy">
+              <div class="section-kicker" data-el="Επικοινωνία" data-en="Contact">Επικοινωνία</div>
+              <h3
+                data-el="Ας μιλήσουμε ήρεμα για τη δική σας ημέρα."
+                data-en="Let’s talk quietly about your day.">
+                Ας μιλήσουμε ήρεμα για τη δική σας ημέρα.
+              </h3>
+              <p
+                data-el="Αν αισθάνεστε ότι η αισθητική, η ειλικρίνεια και η ατμόσφαιρα έχουν ουσιαστική σημασία για εσάς, θα χαρώ να ακούσω την ιστορία σας. Μπορείτε να επικοινωνήσετε για διαθεσιμότητα, πληροφορίες ή για μια πρώτη γνωριμία."
+                data-en="If aesthetics, honesty, and atmosphere matter deeply to you, I would be glad to hear your story. You can get in touch for availability, information, or simply for an initial conversation."
+              >
+                Αν αισθάνεστε ότι η αισθητική, η ειλικρίνεια και η ατμόσφαιρα έχουν ουσιαστική σημασία για εσάς, θα χαρώ να ακούσω την ιστορία σας. Μπορείτε να επικοινωνήσετε για διαθεσιμότητα, πληροφορίες ή για μια πρώτη γνωριμία.
+              </p>
+
+              <div class="contact-actions">
+                <a class="btn-primary" href="mailto:lafotostudio2025@gmail.com" data-el="Στείλτε email" data-en="Send email">Στείλτε email</a>
+                <a class="btn-secondary" href="https://wa.me/306936897702" target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+            </div>
+
+            <div class="contact-panel">
+              <div class="contact-list">
+                <div class="contact-item">
+                  <small data-el="Τηλέφωνο" data-en="Phone">Τηλέφωνο</small>
+                  <a href="tel:+306936897702">6936897702</a>
+                </div>
+
+                <div class="contact-item">
+                  <small data-el="Email" data-en="Email">Email</small>
+                  <a href="mailto:lafotostudio2025@gmail.com">lafotostudio2025@gmail.com</a>
+                </div>
+
+                <div class="contact-item">
+                  <small data-el="Instagram" data-en="Instagram">Instagram</small>
+                  <a href="https://www.instagram.com/lafoto_visual_essence/" target="_blank" rel="noopener">@lafoto_visual_essence</a>
+                </div>
+
+                <div class="contact-item">
+                  <small data-el="Βάση" data-en="Based in">Βάση</small>
+                  <span data-el="Λάρισα, Ελλάδα" data-en="Larissa, Greece">Λάρισα, Ελλάδα</span>
+                </div>
+
+                <div class="contact-item">
+                  <small data-el="Facebook" data-en="Facebook">Facebook</small>
+                  <a href="https://www.facebook.com/" target="_blank" rel="noopener">Lafoto</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-card reveal">
+          <div class="footer-brand">
+            <img src="logo.png" alt="Lafoto logo footer">
+            <p
+              data-el="Wedding Photography & Cinematography με έμφαση στην ατμόσφαιρα, τη μνήμη και τη διαχρονική αισθητική."
+              data-en="Wedding Photography & Cinematography with an emphasis on atmosphere, memory, and timeless aesthetics.">
+              Wedding Photography & Cinematography με έμφαση στην ατμόσφαιρα, τη μνήμη και τη διαχρονική αισθητική.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h5 data-el="Πλοήγηση" data-en="Navigation">Πλοήγηση</h5>
+            <div class="footer-links">
+              <a href="#home" data-el="Αρχική" data-en="Home">Αρχική</a>
+              <a href="#portfolio" data-el="Portfolio" data-en="Portfolio">Portfolio</a>
+              <a href="#about" data-el="Η ιστορία μου" data-en="My story">Η ιστορία μου</a>
+              <a href="#contact" data-el="Επικοινωνία" data-en="Contact">Επικοινωνία</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h5 data-el="Επικοινωνία" data-en="Contact">Επικοινωνία</h5>
+            <div class="footer-links">
+              <a href="tel:+306936897702">6936897702</a>
+              <a href="mailto:lafotostudio2025@gmail.com">lafotostudio2025@gmail.com</a>
+              <a href="https://www.instagram.com/lafoto_visual_essence/" target="_blank" rel="noopener">@lafoto_visual_essence</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h5 data-el="Σημείωση" data-en="Note">Σημείωση</h5>
+            <div
+              data-el="Οι φωτογραφίες του portfolio προβάλλονται κάθε φορά σε τυχαία σειρά, ώστε η εμπειρία να παραμένει ζωντανή και φυσική."
+              data-en="The portfolio images appear in a random order each time, so the viewing experience remains alive and organic.">
+              Οι φωτογραφίες του portfolio προβάλλονται κάθε φορά σε τυχαία σειρά, ώστε η εμπειρία να παραμένει ζωντανή και φυσική.
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>© <span id="year"></span> Lafoto Visual Essence</div>
+          <div
+            data-el="Designed with calm, light and feeling."
+            data-en="Designed with calm, light and feeling.">
+            Designed with calm, light and feeling.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <a class="floating-wa" href="https://wa.me/306936897702" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <span>WhatsApp</span>
+  </a>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close">✕</button>
+      <button class="lightbox-btn lightbox-prev" id="lightboxPrev" type="button" aria-label="Previous">‹</button>
+      <img id="lightboxImage" src="" alt="Portfolio image enlarged">
+      <button class="lightbox-btn lightbox-next" id="lightboxNext" type="button" aria-label="Next">›</button>
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <script>
+    const allImages = [
+      "agor-2290.JPG",
+      "avr-1116.jpg",
+      "avr-1475.jpg",
+      "avr-4605.jpg",
+      "avr-4609.jpg",
+      "avr-4617.jpg",
+      "avr-4622.jpg",
+      "avr-4634.jpg",
+      "avr-4637.jpg",
+      "avr-4650.jpg",
+      "avr-4662.jpg",
+      "avr-4668.jpg",
+      "avr-4670.jpg",
+      "avr-4674.jpg",
+      "avr-4677.jpg",
+      "avr-4691.jpg",
+      "avr-4700.jpg",
+      "avr-4754.jpg",
+      "avr-4757.jpg",
+      "avr-4764.jpg",
+      "avr-4778.jpg",
+      "avr-4785.jpg",
+      "avr-4800.jpg",
+      "avr-4827.jpg",
+      "avr-4834.jpg",
+      "avr-4852.jpg",
+      "avr-4865.jpg",
+      "avr-4887.jpg",
+      "avr-4897.jpg",
+      "avr-4928.jpg",
+      "avr-4940.jpg",
+      "avr-4942.jpg",
+      "avr-4990.jpg",
+      "avr-5013.jpg",
+      "avr-5021.jpg",
+      "avr-5026.jpg",
+      "avr-5034.jpg",
+      "avr-5041.jpg",
+      "avr-5049.jpg",
+      "avr-5091.jpg",
+      "avr-5106.jpg",
+      "avr-5118.jpg",
+      "avr-5119.jpg",
+      "avr-5128.jpg",
+      "avr-5139.jpg",
+      "avr-5142.jpg",
+      "avr-5148.jpg",
+      "avr-5153.jpg",
+      "avr-5158 (1).jpg",
+      "avr-5158.jpg",
+      "avr-5163 (1).jpg",
+      "avr-5163.jpg",
+      "avr-5172.jpg",
+      "avr-5175 (1).jpg",
+      "avr-5175.jpg",
+      "DSC00607.jpg",
+      "DSC00616.jpg",
+      "DSC00620.jpg",
+      "DSC00626.jpg",
+      "DSC00629.jpg",
+      "DSC00631.jpg",
+      "DSC01395.jpg",
+      "DSC01453.jpg",
+      "DSC01512.jpg",
+      "DSC01625.jpg",
+      "DSC01673.jpg",
+      "DSC01780.jpg",
+      "DSC01803.jpg",
+      "DSC03380.jpg",
+      "DSC03436.jpg",
+      "DSC03539.jpg",
+      "DSC03565.jpg",
+      "DSC03570.jpg",
+      "DSC03666.jpg",
+      "DSC03768.jpg",
+      "DSC09142.jpg",
+      "DSC09149.jpg",
+      "DSC09242.jpg",
+      "DSC09266.jpg",
+      "DSC09286.jpg",
+      "DSC09306.jpg",
+      "DSC09310.jpg",
+      "DSC09319.jpg",
+      "DSC09322.jpg",
+      "DSC09352.jpg",
+      "DSC09365.jpg",
+      "DSC09368.jpg",
+      "DSC09402.jpg",
+      "DSC09407.jpg",
+      "DSC09412.jpg",
+      "DSC09421.jpg",
+      "DSC09426.jpg",
+      "DSC09437.jpg",
+      "DSC09453.jpg",
+      "DSC09459.jpg",
+      "DVD.jpg",
+      "gone-1452.jpg",
+      "gone-1806.jpg",
+      "il-1105.jpg",
+      "il-1204.jpg",
+      "il-1207.jpg",
+      "il-1250.jpg",
+      "il-1268.jpg",
+      "il-1279.jpg",
+      "il-1532.jpg",
+      "il-2540.jpg",
+      "il-2810.jpg",
+      "il-2872.jpg",
+      "il-4281.jpg",
+      "il-4660.jpg",
+      "il-4661.jpg",
+      "il-4689.jpg",
+      "il-4713.jpg",
+      "il-4749.jpg",
+      "il-4794.jpg",
+      "il-4799.jpg",
+      "il-4802.jpg",
+      "il-4807.jpg",
+      "il-4818.jpg",
+      "il-4939.jpg",
+      "il-4947.jpg",
+      "il-4956.jpg",
+      "il-4961.jpg",
+      "il-4972.jpg",
+      "il-4993.jpg",
+      "il-5002.jpg",
+      "il-5021.jpg",
+      "il-5044.jpg",
+      "il-5086.jpg",
+      "il-5291.jpg",
+      "il-5333.jpg",
+      "il-5355.jpg",
+      "il-5378.jpg",
+      "il-5397.jpg",
+      "il-5441.jpg",
+      "il-5453.jpg",
+      "il-5478.jpg",
+      "il-5497.jpg",
+      "il-5522.jpg",
+      "il-5559.jpg",
+      "il-5567.jpg",
+      "il-5590.jpg",
+      "il-5631_PR.jpg",
+      "IMG_0163.jpg",
+      "IMG_0180.jpg",
+      "mantz-3097.jpg",
+      "mantz-3140.jpg",
+      "mantz-3660.jpg",
+      "mantz-3672.jpg",
+      "mantz-3686.jpg",
+      "mantz-3702.jpg",
+      "mantz-3719.jpg",
+      "mantz-3724.jpg",
+      "mantz-3740.jpg",
+      "mantz-3744.jpg",
+      "mantz-3756.jpg",
+      "mantz-3772.jpg",
+      "mantz-3779.jpg",
+      "mantz-3797.jpg",
+      "mantz-3814.jpg",
+      "mantz-3820.jpg",
+      "mantz-3828.jpg",
+      "mantz-3839.jpg",
+      "mantz-3850.jpg",
+      "mantz-3855.jpg",
+      "mantz-3861.jpg",
+      "mantz-3872.jpg",
+      "mantz-3895.jpg",
+      "mantz-3921.jpg",
+      "mantz-3932.jpg",
+      "mantz-3939.jpg",
+      "mantz-3964.jpg",
+      "mantz-3979.jpg",
+      "mantz-3986.jpg",
+      "mantz-4015.jpg",
+      "mantz-4024.jpg",
+      "mantz-4054.jpg",
+      "mantz-4192.jpg",
+      "mantz-4195.jpg",
+      "mantz-4305.jpg",
+      "mantz-4308.jpg",
+      "mantz-4355.jpg",
+      "mantz-4417.jpg",
+      "mantz-4450.jpg",
+      "mantz-4494.jpg",
+      "mantz-4503.jpg",
+      "mantz-4521.jpg",
+      "sak-1236.jpg",
+      "sak-1317.jpg",
+      "sak-1356.jpg",
+      "sak-1747.jpg",
+      "sam-2247.jpg"
+    ];
+
+    const heroImages = [
+      "mantz-3986.jpg",
+      "avr-4754.jpg",
+      "il-4799.jpg",
+      "DSC09412.jpg",
+      "mantz-4054.jpg",
+      "sak-1317.jpg"
+    ];
+
+    let currentLang = "el";
+    let currentGallery = [];
+    let lightboxIndex = 0;
+
+    const masonryGallery = document.getElementById("masonryGallery");
+    const reshuffleBtn = document.getElementById("reshuffleBtn");
+    const topBtn = document.getElementById("topBtn");
+    const heroSlides = document.getElementById("heroSlides");
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxCaption = document.getElementById("lightboxCaption");
+    const lightboxClose = document.getElementById("lightboxClose");
+    const lightboxPrev = document.getElementById("lightboxPrev");
+    const lightboxNext = document.getElementById("lightboxNext");
+
+    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+    const mobilePanel = document.getElementById("mobilePanel");
+
+    function shuffle(array){
+      const copy = [...array];
+      for(let i = copy.length - 1; i > 0; i--){
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function createHeroSlides(){
+      heroSlides.innerHTML = "";
+      heroImages.forEach((src, index) => {
+        const slide = document.createElement("div");
+        slide.className = "hero-slide" + (index === 0 ? " active" : "");
+        slide.innerHTML = `<img src="${src}" alt="Lafoto featured image ${index + 1}">`;
+        heroSlides.appendChild(slide);
+      });
+    }
+
+    function startHeroSlider(){
+      const slides = [...document.querySelectorAll(".hero-slide")];
+      if(!slides.length) return;
+      let current = 0;
+      setInterval(() => {
+        slides[current].classList.remove("active");
+        current = (current + 1) % slides.length;
+        slides[current].classList.add("active");
+      }, 4800);
+    }
+
+    function renderGallery(){
+      currentGallery = shuffle(allImages);
+      masonryGallery.innerHTML = "";
+
+      currentGallery.forEach((src, index) => {
+        const item = document.createElement("button");
+        item.className = "masonry-item";
+        item.type = "button";
+        item.setAttribute("aria-label", `Open image ${index + 1}`);
+        item.innerHTML = `<img src="${src}" alt="Lafoto portfolio image ${index + 1}" loading="lazy">`;
+        item.addEventListener("click", () => openLightbox(index));
+        masonryGallery.appendChild(item);
+      });
+    }
+
+    function openLightbox(index){
+      lightboxIndex = index;
+      updateLightbox();
+      lightbox.classList.add("open");
+      document.body.style.overflow = "hidden";
+      lightbox.setAttribute("aria-hidden", "false");
+    }
+
+    function closeLightbox(){
+      lightbox.classList.remove("open");
+      document.body.style.overflow = "";
+      lightbox.setAttribute("aria-hidden", "true");
+    }
+
+    function updateLightbox(){
+      const src = currentGallery[lightboxIndex];
+      lightboxImage.src = src;
+      lightboxCaption.textContent = src;
+    }
+
+    function prevImage(){
+      lightboxIndex = (lightboxIndex - 1 + currentGallery.length) % currentGallery.length;
+      updateLightbox();
+    }
+
+    function nextImage(){
+      lightboxIndex = (lightboxIndex + 1) % currentGallery.length;
+      updateLightbox();
+    }
+
+    function setLanguage(lang){
+      currentLang = lang;
+
+      document.querySelectorAll(".lang-btn").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.lang === lang);
+      });
+
+      document.querySelectorAll("[data-el][data-en]").forEach(el => {
+        el.textContent = el.dataset[lang];
+      });
+
+      document.documentElement.lang = lang;
+    }
+
+    function initLanguageButtons(){
+      document.querySelectorAll(".lang-btn").forEach(btn => {
+        btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
+      });
+    }
+
+    function initReveal(){
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+    }
+
+    function initMobileMenu(){
+      mobileMenuBtn.addEventListener("click", () => {
+        mobilePanel.classList.toggle("open");
+      });
+
+      mobilePanel.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => mobilePanel.classList.remove("open"));
+      });
+    }
+
+    function initButtons(){
+      reshuffleBtn.addEventListener("click", renderGallery);
+      topBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+      lightboxClose.addEventListener("click", closeLightbox);
+      lightboxPrev.addEventListener("click", prevImage);
+      lightboxNext.addEventListener("click", nextImage);
+
+      lightbox.addEventListener("click", (e) => {
+        if(e.target === lightbox) closeLightbox();
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if(!lightbox.classList.contains("open")) return;
+        if(e.key === "Escape") closeLightbox();
+        if(e.key === "ArrowLeft") prevImage();
+        if(e.key === "ArrowRight") nextImage();
+      });
+    }
+
+    function setYear(){
+      document.getElementById("year").textContent = new Date().getFullYear();
+    }
+
+    createHeroSlides();
+    renderGallery();
+    startHeroSlider();
+    initLanguageButtons();
+    initReveal();
+    initMobileMenu();
+    initButtons();
+    setYear();
+    setLanguage("el");
+  </script>
+</body>
+</html>
