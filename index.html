@@ -1558,7 +1558,15 @@
     </div>
   </div>
 
- <script>
+</script> ξαναγραψε τα, εξορθολοογισμενα
+Σκέφτηκε για μερικά δευτερόλεπτα
+
+Ναι — το έχεις διπλό και θέλει καθάρισμα.
+Βάλε μόνο ένα <script> ... </script> στο τέλος του body.
+
+Αυτό είναι το εξορθολογισμένο, καθαρό version:
+
+<script>
   const allImages = [
     "DSC00587.jpg",
     "DSC00616.jpg",
@@ -1801,7 +1809,7 @@
 
   function shuffle(array) {
     const copy = [...array];
-    for (let i = copy.length - 1; i > 0; i -= 1) {
+    for (let i = copy.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [copy[i], copy[j]] = [copy[j], copy[i]];
     }
@@ -1828,7 +1836,10 @@
       image.alt = `Lafoto featured image ${index + 1}`;
       image.loading = index === 0 ? "eager" : "lazy";
       image.decoding = "async";
-      if (index === 0) image.fetchPriority = "high";
+
+      if (index === 0) {
+        image.fetchPriority = "high";
+      }
 
       slide.appendChild(image);
       heroSlides.appendChild(slide);
@@ -1873,9 +1884,15 @@
       const image = document.createElement("img");
       image.src = src;
       image.alt = `Lafoto portfolio image ${index + 1}`;
-      image.loading = index < 8 ? "eager" : "lazy";
       image.decoding = "async";
-      if (index < 4) image.fetchPriority = "high";
+
+      if (index < 6) {
+        image.loading = "eager";
+        image.fetchPriority = "high";
+      } else {
+        image.loading = "lazy";
+      }
+
       image.classList.add("is-loading");
 
       image.addEventListener("load", () => {
@@ -1885,6 +1902,7 @@
       image.addEventListener("error", () => {
         image.classList.remove("is-loading");
         image.classList.add("is-error");
+        item.style.display = "none";
       });
 
       item.appendChild(image);
@@ -1904,6 +1922,7 @@
 
     const nextIndex = (lightboxIndex + 1) % currentGallery.length;
     const prevIndex = (lightboxIndex - 1 + currentGallery.length) % currentGallery.length;
+
     preloadImage(currentGallery[nextIndex]);
     preloadImage(currentGallery[prevIndex]);
   }
@@ -1996,10 +2015,12 @@
 
     mobileMenuBtn.addEventListener("click", () => {
       const isOpen = mobilePanel.classList.toggle("open");
+
       mobileMenuBtn.setAttribute(
         "aria-label",
         isOpen ? uiText[currentLang].headerMenuClose : uiText[currentLang].headerMenuOpen
       );
+
       mobileMenuBtn.setAttribute("aria-expanded", String(isOpen));
     });
 
@@ -2054,7 +2075,9 @@
 
   function setYear() {
     const yearNode = document.getElementById("year");
-    if (yearNode) yearNode.textContent = String(new Date().getFullYear());
+    if (yearNode) {
+      yearNode.textContent = String(new Date().getFullYear());
+    }
   }
 
   function init() {
@@ -2068,6 +2091,9 @@
     setYear();
     setLanguage("el");
   }
+
+  init();
+</script> 
 
   init();
 </script>
