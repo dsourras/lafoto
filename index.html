@@ -589,11 +589,13 @@
       color:#fff;
     }
 
-    /* ROBUST GALLERY */
     .masonry{
       display:grid;
       grid-template-columns:repeat(4, minmax(0, 1fr));
       gap:18px;
+      opacity:1 !important;
+      transform:none !important;
+      visibility:visible !important;
     }
 
     .masonry-item{
@@ -630,6 +632,8 @@
       -webkit-transform:translateZ(0);
       transform:translateZ(0);
       backface-visibility:hidden;
+      position:relative;
+      z-index:2;
     }
 
     .masonry-item img.is-error{
@@ -1322,7 +1326,7 @@
         </div>
 
         <div class="section-block">
-          <div class="masonry reveal" id="masonryGallery"></div>
+          <div class="masonry" id="masonryGallery"></div>
         </div>
       </section>
 
@@ -1436,7 +1440,7 @@
               data-el="Με την ίδια διακριτική και προσεγμένη φιλοσοφία, όπου κι αν πραγματοποιείται ο γάμος σας."
               data-en="With the same discreet and carefully considered approach, wherever your wedding takes place."
             >
-              Με την ίδια διακριτική και προσεγμένη φιλοσοφία, যেখানে κι αν πραγματοποιείται ο γάμος σας.
+              Με την ίδια διακριτική και προσεγμένη φιλοσοφία, όπου κι αν πραγματοποιείται ο γάμος σας.
             </p>
           </div>
         </div>
@@ -1721,6 +1725,9 @@
 
       currentGallery = shuffle(allImages);
       masonryGallery.innerHTML = "";
+      masonryGallery.style.opacity = "1";
+      masonryGallery.style.visibility = "visible";
+      masonryGallery.style.transform = "none";
 
       currentGallery.forEach((src, index) => {
         const item = document.createElement("button");
@@ -1736,6 +1743,11 @@
         if (index < 4) {
           image.fetchPriority = "high";
         }
+
+        image.addEventListener("load", () => {
+          image.style.opacity = "1";
+          image.style.visibility = "visible";
+        });
 
         image.addEventListener("error", () => {
           image.classList.add("is-error");
@@ -1833,12 +1845,15 @@
 
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting || entry.intersectionRatio > 0) {
             entry.target.classList.add("is-visible");
             observer.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.12 });
+      }, {
+        threshold: 0,
+        rootMargin: "0px 0px -40px 0px"
+      });
 
       revealItems.forEach((element) => observer.observe(element));
     }
