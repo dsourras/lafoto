@@ -310,12 +310,12 @@
       min-height:calc(100vh - 40px);
       display:grid;
       align-items:end;
-      padding:28px 0 22px;
+      padding:16px 0 12px;
     }
 
     .hero-card{
       position:relative;
-      min-height:88vh;
+      min-height:82vh;
       border-radius:var(--radius-xl);
       overflow:hidden;
       border:1px solid var(--stroke);
@@ -373,8 +373,8 @@
       align-items:end;
       grid-template-columns:1.12fr 0.88fr;
       gap:28px;
-      min-height:88vh;
-      padding:clamp(30px,4vw,62px);
+      min-height:82vh;
+      padding:clamp(24px,3.6vw,52px);
     }
 
     .hero-copy{
@@ -387,24 +387,24 @@
       display:inline-flex;
       align-items:center;
       gap:10px;
-      padding:8px 14px;
+      padding:7px 12px;
       border-radius:999px;
-      border:1px solid rgba(255,255,255,0.12);
-      background:rgba(255,255,255,0.05);
-      color:#eee4d7;
-      font-size:0.78rem;
-      letter-spacing:0.15em;
+      border:1px solid rgba(255,255,255,0.09);
+      background:rgba(255,255,255,0.035);
+      color:#ddd1c1;
+      font-size:0.72rem;
+      letter-spacing:0.13em;
       text-transform:uppercase;
       backdrop-filter:blur(8px);
-      margin-bottom:20px;
+      margin-bottom:16px;
     }
 
     .hero h1{
       font-family:"Cormorant Garamond",serif;
-      font-size:clamp(3.2rem, 7vw, 6.8rem);
-      line-height:0.90;
+      font-size:clamp(2.9rem, 6.2vw, 5.7rem);
+      line-height:0.92;
       letter-spacing:-0.035em;
-      font-weight:600;
+      font-weight:500;
       max-width:11ch;
       text-wrap:balance;
     }
@@ -421,15 +421,15 @@
     }
 
     .hero-lead{
-      margin-top:24px;
-      max-width:60ch;
-      font-size:1.02rem;
-      line-height:1.9;
-      color:rgba(245,241,234,0.82);
+      margin-top:18px;
+      max-width:56ch;
+      font-size:0.97rem;
+      line-height:1.82;
+      color:rgba(245,241,234,0.72);
     }
 
     .hero-actions{
-      margin-top:30px;
+      margin-top:24px;
       display:flex;
       align-items:center;
       gap:12px;
@@ -534,36 +534,36 @@
       align-items:end;
       justify-content:space-between;
       gap:22px;
-      margin-bottom:24px;
+      margin-bottom:16px;
     }
 
     .section-kicker{
-      color:var(--accent);
-      letter-spacing:0.18em;
+      color:rgba(219,194,161,0.74);
+      letter-spacing:0.15em;
       text-transform:uppercase;
-      font-size:0.74rem;
-      margin-bottom:10px;
+      font-size:0.68rem;
+      margin-bottom:8px;
     }
 
     h2{
       font-family:"Cormorant Garamond",serif;
-      font-size:clamp(2.6rem,4vw,4.2rem);
-      line-height:0.94;
-      font-weight:600;
+      font-size:clamp(2.2rem,3.3vw,3.3rem);
+      line-height:0.98;
+      font-weight:500;
       letter-spacing:-0.03em;
       text-wrap:balance;
     }
 
     .section-desc{
-      max-width:58ch;
-      color:var(--muted);
-      line-height:1.9;
-      font-size:0.98rem;
+      max-width:52ch;
+      color:rgba(200,193,184,0.82);
+      line-height:1.78;
+      font-size:0.93rem;
     }
 
     .portfolio-controls{
       display:flex;
-      gap:10px;
+      gap:8px;
       align-items:center;
       flex-wrap:wrap;
     }
@@ -572,12 +572,12 @@
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      min-height:42px;
-      padding:10px 16px;
+      min-height:38px;
+      padding:9px 14px;
       border-radius:999px;
       border:1px solid var(--stroke-soft);
-      background:rgba(255,255,255,0.04);
-      color:#f0e7dc;
+      background:rgba(255,255,255,0.03);
+      color:#ddd2c4;
       cursor:pointer;
       transition:all .22s ease;
     }
@@ -590,9 +590,8 @@
     }
 
     .masonry{
-      display:grid;
-      grid-template-columns:repeat(4, minmax(0, 1fr));
-      gap:18px;
+      column-count:4;
+      column-gap:0;
       opacity:1 !important;
       transform:none !important;
       visibility:visible !important;
@@ -603,32 +602,32 @@
       display:block;
       width:100%;
       padding:0;
-      border-radius:22px;
+      border-radius:0;
       overflow:hidden;
-      border:1px solid rgba(255,255,255,0.08);
-      background:#111318;
-      box-shadow:0 12px 30px rgba(0,0,0,0.18);
+      border:none;
+      background:transparent;
+      box-shadow:none;
       cursor:pointer;
-      transition:transform .24s ease, border-color .24s ease;
+      transition:opacity .24s ease;
       -webkit-appearance:none;
       appearance:none;
-      aspect-ratio:4 / 5;
+      break-inside:avoid;
+      margin:0;
     }
 
     .masonry-item:hover{
-      transform:translateY(-2px);
-      border-color:rgba(255,255,255,0.13);
+      opacity:0.96;
     }
 
     .masonry-item img{
       width:100%;
-      height:100%;
-      object-fit:cover;
+      height:auto;
+      object-fit:contain;
       display:block;
       opacity:1 !important;
       visibility:visible !important;
       background:#0f0f12;
-      transition:transform .7s ease, filter .45s ease;
+      transition:filter .35s ease;
       -webkit-transform:translateZ(0);
       transform:translateZ(0);
       backface-visibility:hidden;
@@ -641,23 +640,15 @@
     }
 
     .masonry-item:hover img{
-      transform:scale(1.04) translateZ(0);
-      filter:saturate(1.02) contrast(1.01);
+      filter:saturate(1.01) contrast(1.01);
     }
 
     .masonry-item::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      z-index:3;
-      background:linear-gradient(180deg, transparent 35%, rgba(0,0,0,0.24) 100%);
-      opacity:0;
-      transition:opacity .28s ease;
-      pointer-events:none;
+      display:none;
     }
 
     .masonry-item:hover::after{
-      opacity:1;
+      display:none;
     }
 
     .about-grid{
@@ -1097,7 +1088,7 @@
       .services{grid-template-columns:1fr}
       .contact-grid{grid-template-columns:1fr}
       .footer-card{grid-template-columns:1fr 1fr}
-      .masonry{grid-template-columns:repeat(3, minmax(0, 1fr));}
+      .masonry{column-count:3;}
     }
 
     @media (max-width: 900px){
@@ -1170,8 +1161,7 @@
       }
 
       .lightbox-btn{display:none}
-      .masonry{grid-template-columns:repeat(2, minmax(0, 1fr)); gap:12px;}
-      .masonry-item{border-radius:18px;}
+      .masonry{column-count:2;}
     }
 
     @media (max-width: 560px){
@@ -1184,8 +1174,7 @@
       .contact-grid{padding:18px}
       .quote p{max-width:18ch}
       .lang-switch{order:2}
-      .masonry{grid-template-columns:repeat(2, minmax(0, 1fr)); gap:10px;}
-      .masonry-item{border-radius:16px;}
+      .masonry{column-count:2;}
     }
   </style>
 </head>
